@@ -55,7 +55,7 @@ void Data::assertSizes() { assert(m_data.size() + 1 == m_bins.size()); }
 int Data::checkCompatibility(const Data& in, int n) {
   int n_incompatible = 0;
   for (int i = 0; i < m_data.size(); ++i) {
-    double diff = abs(m_data[i] - in.measurement(i));
+    double diff = std::abs(m_data[i] - in.measurement(i));
     double sigma = sqrt(pow(m_errors[i], 2) + pow(in.error(i), 2));
     if (diff > n * sigma) {
       ++n_incompatible;
