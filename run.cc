@@ -73,7 +73,7 @@ void runTests() {
 
 void printNumberIncompatiblePoints(const std::string& filename1, const std::string& filename2, int i, int j, int sigma, std::vector<Data> &data)
 {
-  std::cout << "Number of incompatible points between " << filename1 << " and " << filename2 << " for " << sigma << " sigma: " << data[i].checkCompatibility(data[j], 1) << std::endl;
+  std::cout << "Number of incompatible points between " << filename1 << " and " << filename2 << " for " << sigma << " sigma: " << data[i].checkCompatibility(data[j], sigma) << std::endl;
 }
 
 void exerciseBreak()
